@@ -1,0 +1,108 @@
+.app {
+  max-width: 800px; /* Set a maximum width for the app */
+  margin: 0 auto; /* Center the app horizontally */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links button {
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.nav-links button:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content */
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  width: 100%; /* Ensure it takes the full width */
+}
+
+.search-section {
+  display: flex;
+  gap: 10px;
+  max-width: 600px; /* Set a max width for the search section */
+  width: 100%; /* Ensure it takes the full width */
+}
+
+.search-section input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.search-section button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-section button:hover {
+  background-color: #0056b3;
+}
+
+.book-list {
+  margin-top: 20px;
+  width: 100%; /* Ensure it takes the full width */
+}
+
+.book-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  width: 100%; /* Ensure book items take the full width */
+  max-width: 600px; /* Set a max width for book items */
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color:antiquewhite(0, 0, 0);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  float: right;
+}
