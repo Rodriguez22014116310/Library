@@ -1,0 +1,80 @@
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.form-and-list-container {
+    display: flex; 
+}
+
+.form-container {
+    flex: 1; 
+    margin-right: 20px; 
+    margin-top: 60px;
+}
+
+.book-list-container {
+    flex: 2; 
+    margin-left: 20px; 
+}
+
+.input {
+    display: block; 
+    margin-bottom: 10px; 
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.book-list {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.book-item {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 10px; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+.action-button {
+    margin-left: 10px; 
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #c82333; 
+}
+
+.book-actions {
+    display: flex; 
+    gap: 10px; 
+}

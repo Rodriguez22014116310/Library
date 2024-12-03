@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import 'font-awesome/css/font-awesome.min.css'; // Ensure Font Awesome is imported
+import 'font-awesome/css/font-awesome.min.css';
 
 const Navbar = ({ fetchBooks }) => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -11,7 +11,7 @@ const Navbar = ({ fetchBooks }) => {
 
     const toggleDrawer = () => {
         setIsDrawerOpen(!isDrawerOpen);
-        setErrorMessage(''); // Clear error message when toggling
+        setErrorMessage('');
     };
 
     const addBook = async () => {
@@ -24,7 +24,7 @@ const Navbar = ({ fetchBooks }) => {
             await axios.post('http://localhost:5000/api/books', newBook);
             setTitle('');
             setAuthor('');
-            fetchBooks(); // Refresh the book list
+            fetchBooks(); 
         } catch (error) {
             setErrorMessage('Failed to add book. Please try again.');
         }
@@ -38,7 +38,7 @@ const Navbar = ({ fetchBooks }) => {
         try {
             await axios.delete(`http://localhost:5000/api/books/${deleteId}`);
             setDeleteId('');
-            fetchBooks(); // Refresh the book list
+            fetchBooks(); 
         } catch (error) {
             setErrorMessage('Failed to delete book. Please try again.');
         }
@@ -49,45 +49,9 @@ const Navbar = ({ fetchBooks }) => {
             <nav className="navbar">
                 <h1>Mini Library</h1>
                 <div className="nav-links">
-                    <button onClick={toggleDrawer} aria-label="Toggle drawer">
-                        <i className="fa fa-user" aria-hidden="true"></i> {/* Human icon */}
-                    </button>
+                    
                 </div>
             </nav>
-
-            {isDrawerOpen && (
-                <div className="drawer">
-                    <button className="close-btn" onClick={toggleDrawer} aria-label="Close drawer">X</button>
-                    <h2>Add a Book</h2>
-                    <div className="add-book-section">
-                        <input
-                            type="text"
-                            placeholder="Book Title"
-                            value={title}
-                            onChange={(e) => setTitle(e.target.value)}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Book Author"
-                            value={author}
-                            onChange={(e) => setAuthor(e.target.value)}
-                        />
-                        {/* Button positioned directly under the input fields */}
-                        <button onClick={addBook}>Add Book</button>
-                    </div>
-                    <h3>Delete Book</h3>
-                    <div>
-                        <input
-                            type="text"
-                            placeholder="Book ID to Delete"
-                            value={deleteId}
-                            onChange={(e) => setDeleteId(e.target.value)}
-                        />
-                        <button onClick={deleteBook}>Delete Book</button>
-                    </div>
-                    {errorMessage && <p className="error-message">{errorMessage}</p>}
-                </div>
-            )}
         </div>
     );
 };
